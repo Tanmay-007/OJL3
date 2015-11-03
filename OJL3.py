@@ -75,6 +75,10 @@ def parse_report(report_lines, time_lim_s):
 			verdict = "TLE"
 	elif report_lines[0] == "Time Limit Exceeded":
 		verdict = "TLE"
+	elif report_line[0] == "Invalid Function":
+		verdict = "RF"
+	elif report_lines[0] == "Internal Error":
+		verdict = "IE"
 	elif report_lines[0].startswith("Command exited with non-zero status"):
 		verdict = "NZEC"
 	elif report_lines[0].startswith("Command terminated by signal"):
